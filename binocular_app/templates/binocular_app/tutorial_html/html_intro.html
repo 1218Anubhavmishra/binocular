@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+{% load static%}
+<html lang="en">
+
+  <head>    <title>Binocular_app | Html Home</title>
+    <link rel="icon" href="{%static 'binocular_app/images/binocular_emblem.jpg' %}">
+    {%include 'binocular_app/common/commoncss.html'%}
+    <link href="static/binocular_app/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="static/binocular_app/assets/css/fontawesome.css">
+  </head>
+  <body>
+    <header>{%include 'binocular_app/common/navbar.html'%}</header>
+     
+    <div class=" row tutoriallayout">
+        <div class="col-md-2 menubar">{%include 'binocular_app/common/html_menubar.html'%}
+
+        </div>
+        <div class="col-md-8 mainarea"> 
+            <h2 class="heading2" >Html Intro </h2>
+            <div class="container tutorialinfo">
+                <b>HTML i.e. Hyper Text Markup Language</b> is the standard markup language for 
+                web pages, using which we can create our own website.<br>
+                It informs a <b>web browser</b> of the structure of the web pages though a 
+                sequence of elements .<br>
+                A html element consist of a <b>start</b> tag, <b>content</b> and <b>end</b> tag.<br>
+                HTML elements can be nested<br>
+                Though not all tag have a end tag.<br><br>
+                <table class="htmltag">
+                  <tr><th> Start Tag</th><th>Content</th><th>End tag</th><th>Purpose</th></tr>
+                  <tr> <td>&lt;p&gt;</td> <td>text</td> <td>&lt;/p&gt;</td><td>text as paragraph </td></tr>
+                  <tr> <td>&lt;i&gt;</td> <td>text</td> <td>&lt;/i&gt;</td><td>text in italic </td></tr>
+                  <tr> <td>&lt;a&gt;</td> <td>linking item</td> <td>&lt;/a&gt;</td><td>create a link </td></tr>
+                  <tr> <td>&lt;br&gt;</td> <td>-</td> <td>-</td><td>break the line </td></tr>
+                </table>
+                HTML tags are not case sensitive.<br>
+                The browser only displays the element content.<br><br>
+                <div class="container example" >
+                     <h4>Example</h4>
+                     <div class="container code"> 
+                          <code><xmp>{%include 'binocular_app/tutorial_html/html_examples/hello.html'%} </xmp></code>
+                     </div>
+                     <h5>Output:</h5>
+                     <div class="container code" height="auto">
+                         {%include 'binocular_app/tutorial_html/html_examples/hello.html'%}
+                     </div>
+                 </div><br>
+                   To see the Html Source code of a web page click <b>Ctrl + U</b>. <br>
+                   Or right-click in a black area and 
+                   select <b>"View page Source"</b> to open it in a new tab.<br>
+                  To see every related code , right-click in a blank area and select <b>"Inspect"</b> to open a side window.<br>Here we can also edit the elements on-the-fly.
+                  
+            </div>
+            
+        </div>
+        <div class="col-md-2 sidebar"> Side Bar </div>
+    </div>
+     
+    <footer>{%include 'binocular_app/common/footer.html'%}</footer>
+    
+    {%include 'binocular_app/common/commonjs.html'%}  
+    <script src="{% static 'binocular_app/js/validation.js'%}">
+    </script>
+ </body>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+{% load static%}
+<html lang="en">
+
+  <head>    <title>Binocular_app | Html Head</title>
+    <link rel="icon" href="{%static 'binocular_app/images/binocular_emblem.jpg' %}">
+    {%include 'binocular_app/common/commoncss.html'%}
+    <link href="static/binocular_app/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="static/binocular_app/assets/css/fontawesome.css">
+  </head>
+  <body>
+    <header>{%include 'binocular_app/common/navbar.html'%}</header>
+     
+    <div class=" row tutoriallayout">
+        <div class="col-md-2 menubar">{%include 'binocular_app/common/html_menubar.html'%}
+
+        </div>
+        <div class="col-md-8 mainarea"> 
+            <h2 class="heading2" >Html Head </h2>
+            <div class="container tutorialinfo">
+                HTML <b>head element </b>is a container tag for various document details and is placed within html tag before the body tag.<br>
+                The <b>title element</b> is a required in html as it is usec by search engines algos to in indicate the page.<br>
+                The <b>style element</b> is used to define internal style information for that webpage.<br>
+                The <b>link element</b> is used to connect current webpage to external resourses.<br>
+                The <b>script element</b> is used to define client-side Javascript.<br>
+                The <b>base element</b> specifies the base URL or target url for all relative URL page.<br><br>
+                <div class="container example" >
+                    <h4>Example</h4>
+                    <div class="container code"> 
+                         <code><xmp>{%include 'binocular_app/tutorial_html/html_examples/head.html'%} </xmp></code>
+                    </div>
+                    <h5>Output:</h5>
+                    <div class="container code" height="auto">{%include 'binocular_app/tutorial_html/html_examples/head.html'%}
+                    </div>
+                </div><br>
+                The <b>meta element</b> is used to display <b>Metadata,</b> which are important webpage details like character set.<br><br>
+                These are used by browser but not displayed on the page.<br>
+                The <b>viewport</b> is the user's visible area of a webpage and varies with the device.<br>
+                It's <b>initial-scale</b> part sets the <b> initial zoom</b> level of the web page.<br>
+                The <b>width</b> part can be given the value <b>'device-width'</b> , that allows the page width to follow the <b>screen-width .</b> <br><br>
+                <div class="container example" >
+                    <h4>Example</h4>
+                    <div class="container code"> 
+                         <code><xmp>{%include 'binocular_app/tutorial_html/html_examples/meta.html'%} </xmp></code>
+                    </div>
+                    <h5>Output:</h5>
+                    <div class="container code" height="auto">
+                        {%include 'binocular_app/tutorial_html/html_examples/meta.html'%}
+                    </div>
+                </div><br>
+            </div>
+            
+        </div>
+        <div class="col-md-2 sidebar"> Side Bar </div>
+    </div>
+     
+    <footer>{%include 'binocular_app/common/footer.html'%}</footer>
+    
+    {%include 'binocular_app/common/commonjs.html'%}  
+    <script src="{% static 'binocular_app/js/validation.js'%}">
+    </bscript>
+ </body>
+</html>

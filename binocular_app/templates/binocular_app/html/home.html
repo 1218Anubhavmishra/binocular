@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+{% load static%}
+<html lang="en">
+
+  <head>    <title>Binocular | Home </title>
+     <link rel="icon" href="{%static 'binocular_app/images/binocular_emblem.jpg' %}">
+    {%include 'binocular_app/common/commoncss.html'%}
+    <link href="static/binocular_app/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="static/binocular_app/assets/css/fontawesome.css">
+  </head>
+  <body>
+    <header>{%include 'binocular_app/common/navbar.html'%}</header>
+    
+     <section class='facilities' >
+            <div class='container'>
+                 <div class="text-center section_title">  <h2  class="heading2" >Choose Feature</h2>  </div>
+                 <div class="row">
+                      <div class="col-lg-5 col-md-5 feature_box"> 
+                          <div class="feature_item">
+                               <h4>Coding Examples</h4><br>
+                               <a class=" default-btn " href="{{'codingexample/'}}"> Go Try </a><br><br>
+                          </div>
+                     </div>
+                     {% comment %} <div class="col-lg-5 col-md-5 feature_box"> 
+                          <div class="feature_item">
+                               <h4>Coding Quiz</h4>
+                               <div class="btn default-btn"> Go Try </div>
+                          </div>
+                     </div> {% endcomment %}
+                     {% comment %} <div class="col-lg-5 col-md-5 feature_box"> 
+                          <div class="feature_item">
+                               <h4>Practise Questions</h4>
+                               <div class="btn default-btn"> Go Try </div>
+                          </div>
+                     </div> {% endcomment %}
+                     {% comment %} <div class="col-lg-5 col-md-5 feature_box"> 
+                      <div class="feature_item">
+                           <h4>WorkBoard</h4>
+                           <div class="btn default-btn"> Go Try </div>
+                      </div> {% endcomment %}
+                 </div>
+                 </div>
+            </div>
+    </section> 
+    <section class="python">
+      <div class="container row">
+           <div class="col-lg-5 col-md-4 feature_window" >
+                <h2  class="heading2" >Python</h2><br>
+                <a class=" default-btn  col-sm-6 align-center" href="{{'python_intro/'}}"> Learn</a>
+                {% comment %} <a class="btn default-btn col-sm-6"> Quiz</a> {% endcomment %}
+                {% comment %} <a class="btn default-btn col-sm-6"> Examples</a> {% endcomment %}
+           </div>
+           <div class="col-lg-7 col-md-8 example" >
+                <div class="container code">print("Hello Python")</div>
+                {% comment %} <a class="btn default-btn"> Go Try </a> {% endcomment %}
+           </div>
+      </div>
+    </section>
+
+    <section class="html">
+     <div class="container row">
+          <div class="col-lg-5 col-md-4 feature_window" >
+               <h2  class="heading2" >HTML</h2><br>
+               <a class=" default-btn col-sm-6 align-center" href="{{'html_intro/'}}"> Learn</a>
+               {% comment %} <a class="btn default-btn col-sm-6"> Quiz</a> {% endcomment %}
+               {% comment %} <a class="btn default-btn col-sm-6"> Examples</a> {% endcomment %}
+          </div>
+          <div class="col-lg-7 col-md-8 example" >
+               <div class="container code">
+                    <code><xmp>{%include 'binocular_app/tutorial_html/html_examples/hello.html'%} 
+                    </xmp></code>
+               </div>
+               {% comment %} <a class="btn default-btn"> Go Try </a> {% endcomment %}
+          </div>
+     </div>
+   </section> 
+    <footer>{%include 'binocular_app/common/footer.html'%}</footer>
+    
+    {%include 'binocular_app/common/commonjs.html'%}  
+    <script src="{% static 'binocular_app/js/validation.js'%}">
+    </script>
+ </body>
+</html>

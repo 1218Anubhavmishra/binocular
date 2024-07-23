@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+{% load static%}
+<html lang="en">
+
+  <head>    <title>Binocular_app | Html Text Formattings</title>
+    <link rel="icon" href="{%static 'binocular_app/images/binocular_emblem.jpg' %}">
+    {%include 'binocular_app/common/commoncss.html'%}
+    <link href="static/binocular_app/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="static/binocular_app/assets/css/fontawesome.css">
+  </head>
+  <body>
+    <header>{%include 'binocular_app/common/navbar.html'%}</header>
+     
+    <div class=" row tutoriallayout">
+        <div class="col-md-2 menubar">{%include 'binocular_app/common/html_menubar.html'%}
+
+        </div>
+        <div class="col-md-8 mainarea"> 
+            <h2 class="heading2" >Html Text Formattings </h2>
+            <div class="container tutorialinfo">
+                HTML formatting elements are designed to text in following special ways : <br>
+                <b>&lt;b&gt;</b> for text with boldness, but no extra importance.<br>
+                <b>&lt;strong&gt;</b> for text with strong importance.<br>
+                <b>&lt;i&gt;</b> for text with importance or alternate behavior.<br>
+                <b>&lt;em&gt;</b> for emphasised text.<br>
+                <b>&lt;small&gt;</b> for smaller text.<br>
+                <b>&lt;mark&gt;</b> for marked or highlighted text.<br>
+                <b>&lt;del&gt;</b> for text that is deleated, usually by a striking line through it.<br>
+                <b>&lt;ins&gt;</b> for text that needs to be inserted , indicated with a underline.<br>
+                <b>&lt;sub&gt;</b> for text that is shown half a character below the usual text.<br>
+                <b>&lt;sup&gt;</b> for text that is shown half a character above the usual text.
+                <div class="container example" >
+                    <h4>Example</h4>
+                    <div class="container code"> 
+                         <code><xmp>{%include 'binocular_app/tutorial_html/html_examples/text_formatting.html'%} </xmp></code>
+                    </div>
+                    <h5>Output:</h5>
+                    <div class="container code" height="auto">
+                         {%include 'binocular_app/tutorial_html/html_examples/text_formatting.html'%}
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+        <div class="col-md-2 sidebar"> Side Bar </div>
+    </div>
+     
+    <footer>{%include 'binocular_app/common/footer.html'%}</footer>
+    
+    {%include 'binocular_app/common/commonjs.html'%}  
+    <script src="{% static 'binocular_app/js/validation.js'%}">
+    </script>
+ </body>
+</html>

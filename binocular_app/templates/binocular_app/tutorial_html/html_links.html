@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+{% load static%}
+<html lang="en">
+
+  <head>    <title>Binocular_app | Html Links</title>
+    <link rel="icon" href="{%static 'binocular_app/images/binocular_emblem.jpg' %}">
+    {%include 'binocular_app/common/commoncss.html'%}
+    <link href="static/binocular_app/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="static/binocular_app/assets/css/fontawesome.css">
+  </head>
+  <body>
+    <header>{%include 'binocular_app/common/navbar.html'%}</header>
+     
+    <div class=" row tutoriallayout">
+        <div class="col-md-2 menubar">{%include 'binocular_app/common/html_menubar.html'%}
+
+        </div>
+        <div class="col-md-8 mainarea"> 
+            <h2 class="heading2" >Html Links </h2>
+            <div class="container tutorialinfo">
+                HTML links are hyperlinks that on being clicked will take you to another pages.<br>
+                When we hover over the link,the mouse arrow turns into a hand.<br>
+                The HTML <b>&lt;a&gt;</b> tag defines a hyperlink which can be a text, an image or any other element.<br><br>
+                The href attribute indicates the link's destination.<br>
+                URLs can be of two types :<br>
+                <b>Absolute -</b> complete address of the connected document.<br>
+                <b>Relative -</b> address relative to the current page.<br>
+                The <b>link text</b> is the part that will be visible to the reader.<br>
+                An <b>unvisited link</b> is underlined and blue.<br>
+                A <b>visited link</b> is underlined and purple.<br>
+                An <b>active link</b> is underlined and red.<br><br>
+                By default, the linked page will be displayed in the current browser window,but it can be changed with target attribute.<br>
+                <b>_self -</b> Opens the document in the same window/tab as it was clicked.<br>
+                <b>_blank -</b> Opens the document in a new window or tab.<br>
+                <b>_parent -</b> Opens the document in the parent frame.<br>
+                <b>_top - </b> Opens the document in the full body of the window.<br><br>
+                To use an image as a link, just put the &lt;img&gt; tag inside the <a> tag.<br>
+                To specify link to send emails we use mailto: inside href attribute.<br>
+                Eg, <b> &lt;a href="mailto: username@domain" &gt; send mail &lt;/a&gt; </b> <br><br>
+                HTML <b>buttons</b> can also be used as links by using some JS code.<br> 
+                The <b>title</b> attribute specifies extra information about an element,
+                which is most often shown as a <b>tooltip</b> text when the mouse moves over the element.<br><br>
+                HTML links can be created bookmarks using id attribute to jump to specific parts in a web page.<br>
+                link to that bookmark is created by specifying the '#' and id_value as url.<br> 
+                eg, <b> &lt;p id="bookmark" &gt; reach here &lt;/p&gt;  <br>
+                &lt;a href="#bookmark" &gt; go to bookmark &lt;/a&gt; </b> <br><br>
+                <div class="container example" >
+                  <h4>Example</h4>
+                  <div class="container code"> 
+                       <code><xmp>{%include 'binocular_app/tutorial_html/html_examples/links.html'%} </xmp></code>
+                  </div>
+                  <h5>Output:</h5>
+                  <div class="container code" height="auto">
+                      {%include 'binocular_app/tutorial_html/html_examples/links.html'%}
+                  </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-2 sidebar"> Side Bar </div>
+    </div>
+     
+    <footer>{%include 'binocular_app/common/footer.html'%}</footer>
+    
+    {%include 'binocular_app/common/commonjs.html'%}  
+    <script src="{% static 'binocular_app/js/validation.js'%}">
+    </script>
+ </body>
+</html>

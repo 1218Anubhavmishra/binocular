@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+{% load static%}
+<html lang="en">
+
+  <head>    <title>Binocular_app | Html Paragraphs</title>
+    <link rel="icon" href="{%static 'binocular_app/images/binocular_emblem.jpg' %}">
+    {%include 'binocular_app/common/commoncss.html'%}
+    <link href="static/binocular_app/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="static/binocular_app/assets/css/fontawesome.css">
+  </head>
+  <body>
+    <header>{%include 'binocular_app/common/navbar.html'%}</header>
+     
+    <div class=" row tutoriallayout">
+        <div class="col-md-2 menubar">{%include 'binocular_app/common/html_menubar.html'%}
+
+        </div>
+        <div class="col-md-8 mainarea"> 
+            <h2 class="heading2" >Html Paragraphs </h2>
+            <div class="container tutorialinfo">
+                HTML <b>Paragraphs</b> is a text block that always starts with a new line and to which browsers automatically add some margin before and after.<br>
+                In HTML <b>large/small screens</b> or resized windows will create different results.<br>
+                We can not add <b>extra spaces/lines</b> to change the look of our HTML code as the browser will <b>remove extra spaces/lines</b> when the page is displayed.<br>
+                To define a <b>break</b> in a line without changing the paragraph, we use an <b>empty element</b> called <b> &lt;br&gt; </b> tag.<br>
+                <div class="container example" >
+                  <h4>Example</h4>
+                  <div class="container code"> 
+                       <code><xmp>{%include 'binocular_app/tutorial_html/html_examples/paragraph.html'%} </xmp></code>
+                  </div>
+                  <h5>Output:</h5>
+                  <div class="container code" height="auto">
+                      {%include 'binocular_app/tutorial_html/html_examples/paragraph.html'%}
+                  </div>
+                </div>
+                To declare a <b>thematic break</b>  to separate diffent content in an HTML page, we use <b>&lt;hr&gt;</b> empty element that is displayed as a horizontal line.<br>
+                Eg. <b>&lt;hr&gt;</b> will be displayed as - a this black line like below. <hr>
+                If we ever want to display a text along with it's spaces and line breaks,eg. <b> a poem</b> <br>
+                We use &lt;pre&rt; element which is displayed usually in <b>Courier</b> Font as a <b>preformatted</b> text.
+            </div>
+            
+        </div>
+        <div class="col-md-2 sidebar"> Side Bar </div>
+    </div>
+     
+    <footer>{%include 'binocular_app/common/footer.html'%}</footer>
+    
+    {%include 'binocular_app/common/commonjs.html'%}  
+    <script src="{% static 'binocular_app/js/validation.js'%}">
+    </script>
+ </body>
+</html>
